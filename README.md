@@ -43,7 +43,7 @@ This will start the React development server (Vite) and your frontend will be av
 ### Backend
 
 ```bash
-cd backend   # or wherever your backend code is located
+cd server   # or wherever your backend code is located
 npm install
 npm run server
 ```
