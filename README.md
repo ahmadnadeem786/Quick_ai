@@ -1,4 +1,4 @@
-Quick.AI
+## Quick.AI
 
 **Quick.AI** is a multi-functional AI web application that offers powerful tools for content creation and productivity. It enables users to generate text, create and edit images, analyze résumés, and more — all powered by modern AI APIs.
 
