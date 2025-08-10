@@ -46,7 +46,7 @@ const Dashboard = () => {
             <p className="text-sm">Total Creations</p>
             <h2 className="text-xl font-semibold">{creations.length}</h2>
           </div>
-          <div className="w-10 h-10 rounded-lg bg-[#456882] text-white flex justify-center items-center">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#00DA83] to-[#009BB3] text-white flex justify-center items-center">
             <Sparkles className="w-5" />
           </div>
         </div>
@@ -59,7 +59,7 @@ const Dashboard = () => {
               <Protect plan="premium" fallback="Free">Premium</Protect>
             </h2>
           </div>
-          <div className="w-10 h-10 rounded-lg bg-[#456882] text-white flex justify-center items-center">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#00DA83] to-[#009BB3] text-white flex justify-center items-center">
             <Gem className="w-5" />
           </div>
         </div>

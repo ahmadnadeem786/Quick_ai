@@ -19,7 +19,7 @@ const Layout = () => {
       
       {/* Top Navigation */}
       <nav className='w-full h-16 px-8 bg-[#1B3C53] flex items-center justify-between'>
-        <h2 onClick={()=> navigate("/")} className='text-3xl cursor-pointer text-[#456882] font-semibold flex items-start gap-2 justify-center'>Quick<span className='text-xl bottom2'> AI </span></h2>
+        <h2 onClick={()=> navigate("/")} className='text-3xl cursor-pointer text-[#D2C1B6] font-semibold flex items-start gap-2 justify-center'>Quick<span className='text-xl bottom2'> AI </span></h2>
         {sidebar ? (
           <X
             className='w-6 h-6 text-gray-600 sm:hidden'

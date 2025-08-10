@@ -63,7 +63,7 @@ const RemoveObject = () => {
         className="w-full max-w-lg p-4 bg-white rounded-lg border border-gray-200"
       >
         <div className="flex items-center gap-3">
-          <Sparkles className="w-6 text-[#456882]" />
+          <Sparkles className="w-6 text-[#00DA83]" />
           <h1 className="text-xl font-semibold">Object Removal</h1>
         </div>
 
@@ -83,7 +83,7 @@ const RemoveObject = () => {
         <button
           disabled={loading}
           className='w-full flex justify-center items-center gap-2
-          bg-[#456882] text-gray-300 px-4 py-2 mt-6
+          bg-gradient-to-r from-[#00DA83] to-[#009BB3] text-gray-300 px-4 py-2 mt-6
           text-sm rounded-lg cursor-pointer'>
           {loading ? (
             <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin inline-block" />
@@ -97,7 +97,7 @@ const RemoveObject = () => {
       {/* Right column */}
       <div className="p-4 bg-white rounded-lg flex flex-col border border-gray-200 min-h-96 flex-1">
         <div className="flex items-center gap-3">
-          <Scissors className="w-5 h-5 text-[#456882]" />
+          <Scissors className="w-5 h-5 text-[#00DA83]" />
           <h1 className="text-xl font-semibold">Processed Image</h1>
         </div>
         {!content ? (

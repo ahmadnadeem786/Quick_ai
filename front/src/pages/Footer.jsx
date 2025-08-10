@@ -3,25 +3,33 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1B3C53] text-gray-300 pt-16 pb-10">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-        
+    <footer className="bg-[#1b3c53] text-gray-300 pt-12 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
         {/* About */}
-        <div>
-          <h2 className="text-3xl font-bold text-[#D2C1B6] mb-4">Quick.AI</h2>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            One platform for all your AI needs — generate content, create images, build resumes, and more.
+        <div className="flex flex-col">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#d2c1b6] mb-4">Quick.AI</h2>
+          <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-xs">
+            Your all-in-one platform for AI-powered solutions — generate content, create images, analyze resumes, and more.
           </p>
         </div>
 
         {/* Tools */}
         <div>
-          <h3 className="text-lg font-semibold text-[#D2C1B6] mb-4">AI Tools</h3>
-          <ul className="space-y-2 text-sm">
-            {['Article Generator', 'Image Generator', 'Resume Analyzer', 'AI Chatbot'].map((tool, index) => (
+          <h3 className="text-lg font-semibold text-[#d2c1b6] mb-4">AI Tools</h3>
+          <ul className="space-y-3 text-sm sm:text-base">
+            {[
+              { name: 'Article Generator', path: '/tools/article' },
+              { name: 'Image Generator', path: '/tools/image' },
+              { name: 'Resume Analyzer', path: '/tools/resume' },
+              { name: 'AI Chatbot', path: '/tools/chatbot' },
+            ].map((tool, index) => (
               <li key={index}>
-                <a href="#" className="hover:text-white transition-colors duration-200">
-                  {tool}
+                <a
+                  href={tool.path}
+                  className="hover:text-white transition-colors duration-200 ease-in-out"
+                  aria-label={`Navigate to ${tool.name}`}
+                >
+                  {tool.name}
                 </a>
               </li>
             ))}
@@ -30,12 +38,21 @@ const Footer = () => {
 
         {/* Resources */}
         <div>
-          <h3 className="text-lg font-semibold  text-[#D2C1B6] mb-4">Resources</h3>
-          <ul className="space-y-2 text-sm">
-            {['Blog', 'Docs', 'Support', 'FAQs'].map((item, index) => (
+          <h3 className="text-lg font-semibold text-[#d2c1b6] mb-4">Resources</h3>
+          <ul className="space-y-3 text-sm sm:text-base">
+            {[
+              { name: 'Blog', path: '/blog' },
+              { name: 'Docs', path: '/docs' },
+              { name: 'Support', path: '/support' },
+              { name: 'FAQs', path: '/faqs' },
+            ].map((item, index) => (
               <li key={index}>
-                <a href="#" className="hover:text-white transition-colors duration-200">
-                  {item}
+                <a
+                  href={item.path}
+                  className="hover:text-white transition-colors duration-200 ease-in-out"
+                  aria-label={`Navigate to ${item.name}`}
+                >
+                  {item.name}
                 </a>
               </li>
             ))}
@@ -44,11 +61,31 @@ const Footer = () => {
 
         {/* Contact & Social */}
         <div>
-          <h3 className="text-lg font-semibold  text-[#D2C1B6] mb-4">Get in Touch</h3>
-          <p className="text-sm text-gray-400 mb-4">support@quickai.com</p>
+          <h3 className="text-lg font-semibold text-[#d2c1b6] mb-4">Get in Touch</h3>
+          <p className="text-sm sm:text-base text-gray-400 mb-4">
+            <a
+              href="mailto:support@quickai.com"
+              className="hover:text-white transition-colors duration-200"
+              aria-label="Email support at support@quickai.com"
+            >
+              support@quickai.com
+            </a>
+          </p>
           <div className="flex space-x-4">
-            {[FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub].map((Icon, i) => (
-              <a key={i} href="#" className=" text-[#D2C1B6] hover:text-white transition text-xl">
+            {[
+              { Icon: FaFacebookF, path: 'https://facebook.com', label: 'Facebook' },
+              { Icon: FaTwitter, path: 'https://twitter.com', label: 'Twitter' },
+              { Icon: FaLinkedinIn, path: 'https://linkedin.com', label: 'LinkedIn' },
+              { Icon: FaGithub, path: 'https://github.com', label: 'GitHub' },
+            ].map(({ Icon, path, label }, i) => (
+              <a
+                key={i}
+                href={path}
+                className="text-[#d2c1b6] hover:text-white hover:scale-110 transition-all duration-200 text-xl"
+                aria-label={`Follow us on ${label}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon />
               </a>
             ))}
@@ -57,8 +94,9 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-4 mx-auto w-6xl text-center text-xs text-gray-500 border-t border-[#D2C1B6] pt-7">
-        &copy; {new Date().getFullYear()} <span className="text- text-[#D2C1B6] font-semibold">Quick.AI</span> — All rights reserved.
+      <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-sm text-gray-500 border-t border-[#d2c1b6]/30 pt-6">
+        &copy; {new Date().getFullYear()}{' '}
+        <span className="text-[#d2c1b6] font-semibold">Quick.AI</span> — All rights reserved.
       </div>
     </footer>
   );

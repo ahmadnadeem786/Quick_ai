@@ -60,7 +60,7 @@ const BlogTitles = () => {
         className="w-full max-w-lg p-4 bg-white rounded-lg border border-gray-200"
       >
         <div className="flex items-center gap-3">
-          <Sparkles className="w-6 text-[#456882]" />
+          <Sparkles className="w-6 text-[#00DA83]" />
           <h1 className="text-xl font-semibold">AI Title Generator</h1>
         </div>
 
@@ -80,7 +80,7 @@ const BlogTitles = () => {
             <span
               onClick={() => setSelectedCategory(item)}
               className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedCategory === item
-                ? 'bg-[#456882] text-white'
+                ? 'bg-gradient-to-r from-[#00DA83] to-[#009BB3] text-white'
                 : 'text-gray-500 border-gray-300'
                 }`}
               key={item}
@@ -93,7 +93,7 @@ const BlogTitles = () => {
         <button
           disabled={loading}
           type="submit"
-          className="w-full flex justify-center items-center gap-2 bg-[#456882] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer"
+          className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#00DA83] to-[#009BB3] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer"
         >
           {loading ? (
             <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin inline-block" />
@@ -108,7 +108,7 @@ const BlogTitles = () => {
       {/* Right column */}
       <div className="p-4 bg-white rounded-lg flex flex-col border border-gray-200 min-h-96 flex-1">
         <div className="flex items-center gap-3">
-          <Hash className="w-5 h-5 text-[#456882]" />
+          <Hash className="w-5 h-5 text-[#00DA83]" />
           <h1 className="text-xl font-semibold">Generated Titles</h1>
         </div>
         {!content ? (
