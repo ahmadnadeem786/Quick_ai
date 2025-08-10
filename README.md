@@ -68,7 +68,7 @@ Quick.AI is deployed on Vercel for fast and reliable access.
 
 
 
-##Tools
+## Tools
 
 
 <img width="1894" height="821" alt="Screenshot 2025-08-11 012327" src="https://github.com/user-attachments/assets/ec7249fe-5472-41ea-95aa-29cd138722d6" />
